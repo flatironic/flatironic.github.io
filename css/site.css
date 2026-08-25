@@ -241,6 +241,12 @@ ul { margin: 0; padding: 0; }
 .stores a { display: block; transition: opacity .2s; }
 .stores a:hover { opacity: .78; }
 .stores img { display: block; height: 40px; width: auto; }
+/* In the featured section the badges sit on --ink, where their black
+   lozenges nearly vanish; a hairline rim gives them an edge without
+   touching the vendor artwork itself. */
+.stores--featured { margin-top: clamp(26px, 3.5vw, 38px); gap: 14px; }
+.stores--featured a { border-radius: 6px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .16); }
+.stores--featured a:hover { opacity: 1; box-shadow: 0 0 0 1px rgba(255, 255, 255, .38); }
 
 .cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin-top: clamp(36px, 5vw, 56px); list-style: none; }
 .card {
