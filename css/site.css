@@ -536,6 +536,7 @@ ul { margin: 0; padding: 0; }
 
 /* ------------------------------------------------------------- portrait -- */
 .hero__portrait {
+  filter: grayscale(1);
   position: absolute;
   right: max(1vw, calc(50vw - var(--wrap) / 2 - 270px));
   bottom: 0;
