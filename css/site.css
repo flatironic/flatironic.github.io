@@ -233,6 +233,15 @@ ul { margin: 0; padding: 0; }
 }
 .stack + h3, .about__aside p + h3 { margin-top: 26px; }
 
+/* App-store badges. Official vendor artwork; the Google asset ships with
+   its clear space baked in, so it was cropped to the mark and both are
+   spaced from here — that way they align on height rather than on the
+   padding each vendor happens to include. */
+.stores { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+.stores a { display: block; transition: opacity .2s; }
+.stores a:hover { opacity: .78; }
+.stores img { display: block; height: 40px; width: auto; }
+
 .cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin-top: clamp(36px, 5vw, 56px); list-style: none; }
 .card {
   background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
