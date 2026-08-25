@@ -541,7 +541,7 @@ ul { margin: 0; padding: 0; }
   right: max(1vw, calc(50vw - var(--wrap) / 2 - 270px));
   bottom: 0;
   z-index: 1;
-  height: min(86vh, 820px);
+  height: min(91vh, 870px);
   width: auto;
   pointer-events: none;
 }
