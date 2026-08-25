@@ -1,0 +1,140 @@
+/* ==========================================================================
+   christianmccarthy.com — alternate hero (black & white portrait)
+   Loads AFTER css/site.css and only overrides the hero + nav-at-top.
+   ========================================================================== */
+
+:root {
+  --studio: #e9ecef;   /* one flat ground, edge to edge */
+}
+
+/* ------------------------------------------------------------- backdrop -- */
+.hero--alt {
+  align-items: center;
+  padding: calc(var(--nav-h) + 24px) 0 0;
+  background: var(--studio);
+}
+
+/* A crisp SVG pattern — sharp at any pixel density, one consistent field
+   across the whole hero, no gradients anywhere. */
+.hero__texture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--studio);
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23f2f9fc' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* ------------------------------------------------------------- portrait -- */
+.hero__portrait {
+  position: absolute;
+  right: max(1vw, calc(50vw - var(--wrap) / 2 - 270px));
+  bottom: 0;
+  z-index: 1;
+  height: min(100vh, 900px);
+  width: auto;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------------- type -- */
+.hero--alt .hero__inner { position: relative; z-index: 3; }
+.hero--alt .hero__text { max-width: 560px; }
+
+/* the knot, as an eyebrow above the name — the one piece of brand colour in the hero */
+.hero__mark {
+  width: clamp(92px, 108px, 168px);
+  height: auto;
+  margin: 0 0 20px;
+  display: block;
+}
+
+.hero--alt h1 {
+  color: var(--ink);
+  text-shadow: 0 0 14px rgba(235, 238, 241, .96), 0 0 5px rgba(235, 238, 241, .96), 0 0 2px rgba(235, 238, 241, .92);
+}
+.hero--alt .hero__rule { background: var(--accent); }
+.hero--alt .hero__tagline { color: var(--ink-2); text-shadow: 0 0 12px rgba(235, 238, 241, .96), 0 0 4px rgba(235, 238, 241, .96); }
+.hero--alt .hero__kicker { color: #5c6a75; text-shadow: 0 0 10px rgba(235, 238, 241, .96), 0 0 3px rgba(235, 238, 241, .96); }
+
+.hero--alt .hero__links a {
+  color: var(--ink-2);
+  background: rgba(255, 255, 255, .78);
+  border-color: rgba(31, 45, 60, .14);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.hero--alt .hero__links a:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.hero--alt .hero__links a.is-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.hero--alt .hero__links a.is-primary:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
+
+.hero--alt .hero__scroll {
+  color: #6b7883;
+  text-shadow: 0 0 10px rgba(235, 238, 241, .96);
+  left: max(var(--pad), calc(50vw - var(--wrap) / 2 + var(--pad)));
+  transform: none;
+  align-items: flex-start;
+  z-index: 3;
+}
+.hero--alt .hero__scroll::after { background: linear-gradient(180deg, rgba(107, 120, 131, .9), rgba(107, 120, 131, 0)); }
+
+/* a hairline where the hero hands off to the page */
+.hero--alt::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: rgba(31, 45, 60, .10);
+  z-index: 3;
+}
+
+/* ------------------------------------------------------------------ nav -- */
+/* the hero is light here, so the bar can be present from the first frame */
+body[data-nav="always"] .nav { transform: none; }
+
+/* ---------------------------------------------------------------- small -- */
+@media (max-width: 1100px) {
+  .hero__portrait { right: -9vw; height: min(94vh, 880px); }
+  .hero--alt .hero__text { max-width: 48%; }
+}
+
+/* ---------------------------------------------------------------- phone --
+   No forced full-screen hero here. A phone viewport is tall and narrow, so
+   100svh leaves a dead band between the copy and the figure and pushes the
+   rest of the page entirely out of sight. Instead the hero is sized by its
+   content with a floor, and deliberately stops short of the fold so the next
+   section peeks — that peek is the scroll cue, which is why the "SCROLL"
+   marker is dropped. The figure is scaled to the hero, not the viewport, so
+   the two stay locked together as the copy wraps to more or fewer lines. */
+@media (max-width: 780px) {
+  .hero--alt {
+    /* one figure size drives both the image and the room reserved for it, so
+       the two can never drift apart as the copy rewraps */
+    --figure: clamp(320px, 46svh, 460px);
+    align-items: flex-start;
+    min-height: 0;
+    height: auto;
+    padding: calc(var(--nav-h) + 30px) 0 calc(var(--figure) - 44px);
+  }
+  .hero--alt .hero__text { max-width: 100%; }
+  /* keep the buttons in a narrow column so they wrap away from the figure
+     instead of running under it */
+  .hero--alt .hero__links { margin-top: 26px; max-width: 340px; }
+  .hero__mark { width: 104px; margin-bottom: 16px; }
+  .hero--alt .hero__scroll { display: none; }
+  .hero__portrait {
+    right: -13%;
+    height: var(--figure);
+    width: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero--alt { --figure: clamp(300px, 42svh, 390px); }
+  .hero__portrait { right: -17%; }
+}
+
+/* landscape phones: very little vertical room, so keep the figure modest */
+@media (max-width: 900px) and (max-height: 520px) {
+  .hero--alt { padding-bottom: 190px; }
+  .hero__portrait { right: -6%; width: min(46%, 320px); }
+}

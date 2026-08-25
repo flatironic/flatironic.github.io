@@ -1,4 +1,3 @@
-
 <div class="project">
   <div class="row">
     <div class="medium-12 columns">
@@ -10,30 +9,32 @@
       <img class="img-project" src="img/portfolio/wcpe-portal-webcast.png"/>
     </div>
     <div class="medium-7 columns pt-15">
-      Courses from Western CPE is available via live seminars, self-study (online content/exam) and webcast (video/slides/questions with attendance checks).
+      Western CPE courses are delivered through live seminars, self-study (online content and exam) and webcast
+      (video, slides and questions, with attendance checks).
       Webcasts are required by NASBA (National Association of State Boards of Accountancy) to simulate a live experience.
       <br/><br/>
-      The requirements include a "real time" video that does not pause and will continue to play if the user leaves and returns. Slides need to follow the video and change at specific times.
-      There needs to be a question/answer option for viewers to ask questions that get answered within minutes and provided without refreshing the webcast.
-      Attendance checks display during the webcast have to display in a non-predictable manner and record their response.
+      The requirements included a "real time" video that does not pause and continues playing if the user leaves and returns, slides that
+      follow the video and change at specific times, a question-and-answer channel that returns answers within minutes without a page refresh,
+      and attendance checks that appear unpredictably during the webcast and record the viewer's response.
       <br/><br/>
-      Whew! No problem... using Vue.js with API services and loading the components via Javascript promises. JW Player was selected because of their robust API, which allowed me to
-      mimic live television based off a webcast start value and utilize the timeline of the video to trigger attendence check events and page slide changes.
+      I built it with Vue.js and API services, loading components via JavaScript promises. JW Player was selected for its robust API, which let me
+      mimic live television from a webcast start value and use the video timeline to trigger attendance-check events and slide changes.
       <br/><br/>
-      PDF.js allows webcasts to use one pdf file and load slides as PDF page changes. The app allows for slides that are included in the video itself, modifying the layout based as needed.
+      PDF.js allowed a webcast to use a single PDF file and load slides as page changes. The app also handled webcasts with slides burned into
+      the video itself, adjusting the layout accordingly.
       <br/><br/>
-      A footer control section displays the status of the attendance checks and provids links to course materials and a fullscreen option.
-      The fullscreen option gives a true fullscreen experience while maintaining the layout and functionality of the application.
+      A footer control section displayed the status of the attendance checks and provided links to course materials and a fullscreen option.
+      Fullscreen gave a true fullscreen experience while maintaining the layout and functionality of the application.
       <br/><br/>
-      Questions can be asked which sends questions to "moderators" that place "dibs" on the question as the first step to answering.
-      The answers then load via polling in line with the previous questions/answers that moderators chose to include as part of the webcast for future viewers.
-      These questions scroll to follow the timeline of the video to always display in a relevant manner.
+      Viewers could ask questions, which were routed to moderators who placed "dibs" on a question as the first step to answering it.
+      Answers then loaded via polling, in line with the earlier questions and answers moderators chose to keep for future viewers.
+      These questions scrolled along with the video timeline so they always appeared in context.
       <br/><br/>
-      An intro screen with instructions and overview and a conclusion screen with the user's results sandwich the webcast experience.
+      An intro screen with instructions and an overview, and a conclusion screen with the user's results, sandwiched the webcast experience.
       <br/><br/>
-      Lastly, I built a webcast builder app that allows for administrators to add the webcast course with segments, videos, PDFs and the associated time/page slide changes and attendance checks.
+      I also built a webcast builder that let administrators assemble a webcast course from segments, videos and PDFs, along with the associated
+      slide-change timings and attendance checks.
       <br/><br/>
-      <em style="font-style: italic">*The webcast system is not yet used for production.</em>
     </div>
   </div>
 </div>
