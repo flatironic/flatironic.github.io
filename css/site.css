@@ -541,7 +541,7 @@ ul { margin: 0; padding: 0; }
   right: max(1vw, calc(50vw - var(--wrap) / 2 - 270px));
   bottom: 0;
   z-index: 1;
-  height: min(100vh, 900px);
+  height: min(86vh, 820px);
   width: auto;
   pointer-events: none;
 }
@@ -603,7 +603,7 @@ body[data-nav="always"] .nav { transform: none; }
 
 /* ---------------------------------------------------------------- small -- */
 @media (max-width: 1100px) {
-  .hero__portrait { right: -9vw; height: min(94vh, 880px); }
+  .hero__portrait { right: -9vw; height: min(82vh, 780px); }
   .hero--alt .hero__text { max-width: 48%; }
 }
 
