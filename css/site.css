@@ -30,6 +30,7 @@
   --wrap: 1140px;
   --pad: clamp(20px, 5vw, 48px);
   --radius: 14px;
+  --radius-btn: 4px;
   --shadow-sm: 0 1px 2px rgba(16, 22, 29, .06), 0 4px 14px rgba(16, 22, 29, .05);
   --shadow-md: 0 2px 6px rgba(16, 22, 29, .07), 0 18px 44px rgba(16, 22, 29, .10);
   --nav-h: 62px;
@@ -117,21 +118,21 @@ ul { margin: 0; padding: 0; }
 .nav__brand span { color: var(--accent); }
 .nav__list { display: flex; align-items: center; gap: 4px; list-style: none; }
 .nav__list a {
-  display: block; padding: 8px 12px; border-radius: 999px;
+  display: block; padding: 8px 12px; border-radius: var(--radius-btn);
   font-size: 13.5px; font-weight: 600; letter-spacing: .02em;
   color: var(--body); transition: color .2s, background-color .2s;
 }
 .nav__list a:hover { color: var(--ink); background: var(--paper-3); }
 .nav__list a.is-active { color: var(--accent-deep); background: rgba(194, 112, 58, .10); }
 .nav__cta {
-  margin-left: 8px; padding: 9px 16px !important; border-radius: 999px;
+  margin-left: 8px; padding: 9px 16px !important; border-radius: var(--radius-btn);
   background: var(--ink); color: #fff !important; font-size: 13.5px; font-weight: 600;
 }
 .nav__cta:hover { background: var(--accent-deep) !important; color: #fff !important; }
 
 .nav__toggle {
   display: none; width: 42px; height: 42px; border: 1px solid var(--line);
-  background: var(--paper); border-radius: 10px; cursor: pointer; padding: 0;
+  background: var(--paper); border-radius: var(--radius-btn); cursor: pointer; padding: 0;
   align-items: center; justify-content: center;
 }
 .nav__toggle span, .nav__toggle span::before, .nav__toggle span::after {
@@ -188,7 +189,7 @@ ul { margin: 0; padding: 0; }
 .hero__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
 .hero__links a {
   color: #fff; border: 1px solid rgba(255, 255, 255, .45);
-  padding: 10px 20px; border-radius: 999px; font-size: 14px; font-weight: 600;
+  padding: 10px 20px; border-radius: var(--radius-btn); font-size: 14px; font-weight: 600;
   backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   background: rgba(9, 24, 42, .22);
   transition: background-color .2s, border-color .2s, transform .2s;
@@ -337,7 +338,7 @@ ul { margin: 0; padding: 0; }
 .tile__tools { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); letter-spacing: .04em; margin-bottom: 18px; }
 .tile__links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
 .linkbtn {
-  font-size: 13px; font-weight: 600; padding: 7px 13px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; padding: 7px 13px; border-radius: var(--radius-btn);
   border: 1px solid var(--line); color: var(--ink-2); background: var(--paper);
   cursor: pointer; font-family: inherit; transition: background-color .2s, border-color .2s, color .2s;
 }
@@ -390,7 +391,7 @@ ul { margin: 0; padding: 0; }
 /* The contact link is the prominent one: a chip, not a text link. */
 .contact__list .li-link {
   display: inline-flex; align-items: center; gap: 9px;
-  padding: 8px 15px 8px 12px; border-radius: 999px;
+  padding: 8px 15px 8px 12px; border-radius: var(--radius-btn);
   border: 1px solid rgba(255, 255, 255, .28); background: rgba(255, 255, 255, .06);
   transition: background-color .2s, border-color .2s, color .2s;
 }
@@ -398,7 +399,7 @@ ul { margin: 0; padding: 0; }
 .contact__list .li-link:hover { background: #0a66c2; border-color: #0a66c2; color: #fff; }
 .contact__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .btn {
-  display: inline-block; padding: 12px 22px; border-radius: 999px;
+  display: inline-block; padding: 12px 22px; border-radius: var(--radius-btn);
   font-size: 14.5px; font-weight: 600; border: 1px solid rgba(255, 255, 255, .35); color: #fff;
   transition: background-color .2s, color .2s, border-color .2s, transform .2s;
 }
@@ -429,7 +430,7 @@ ul { margin: 0; padding: 0; }
 }
 .modal__title { font-size: 15px; font-weight: 700; color: var(--ink); margin: 0; }
 .modal__close {
-  border: 1px solid var(--line); background: var(--paper); border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--paper); border-radius: var(--radius-btn); cursor: pointer;
   width: 34px; height: 34px; font-size: 18px; line-height: 1; color: var(--ink-2);
 }
 .modal__close:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
