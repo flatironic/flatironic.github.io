@@ -292,6 +292,7 @@ ul { margin: 0; padding: 0; }
   border: 1px solid rgba(255, 255, 255, .09); border-radius: 20px;
   padding: clamp(16px, 3vw, 34px);
 }
+.featured__art video { display: block; width: 100%; height: auto; border-radius: 12px; background: #000; }
 .featured__art figcaption {
   font-size: 13px; color: #7e8e9c; margin-top: 14px; text-align: center; font-family: var(--font-mono);
 }
@@ -565,6 +566,13 @@ ul { margin: 0; padding: 0; }
 .hero--alt .hero__rule { background: var(--accent); }
 .hero--alt .hero__tagline { color: var(--ink-2); text-shadow: 0 0 12px rgba(235, 238, 241, .96), 0 0 4px rgba(235, 238, 241, .96); }
 .hero--alt .hero__kicker { color: #5c6a75; text-shadow: 0 0 10px rgba(235, 238, 241, .96), 0 0 3px rgba(235, 238, 241, .96); }
+
+/* the headline is a full sentence now, so it runs smaller and narrower than a one-line tagline */
+.hero--alt .hero__tagline { font-size: clamp(18px, 1.9vw, 23px); line-height: 1.4; max-width: 30ch; }
+.hero__open {
+  margin: 18px 0 0; font-size: 15px; font-weight: 600; color: var(--ink-2); max-width: 36ch;
+  text-shadow: 0 0 12px rgba(235, 238, 241, .96), 0 0 4px rgba(235, 238, 241, .96);
+}
 
 .hero--alt .hero__links a {
   color: var(--ink-2);

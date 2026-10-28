@@ -164,6 +164,29 @@
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   });
 
+  /* ------------------------------------------------------- ranes demo --- */
+  // If the demo video has been exported, swap it in for the still image.
+  var demo = document.getElementById('ranesDemo');
+  if (demo && demo.getAttribute('data-video') && window.fetch) {
+    var videoUrl = demo.getAttribute('data-video');
+    fetch(videoUrl, { method: 'HEAD' })
+      .then(function (r) {
+        if (!r.ok) return;
+        var still = demo.querySelector('img');
+        var caption = demo.querySelector('figcaption');
+        var video = document.createElement('video');
+        video.controls = true;
+        video.preload = 'metadata';
+        video.setAttribute('playsinline', '');
+        video.poster = demo.getAttribute('data-poster') || '';
+        video.src = videoUrl;
+        video.setAttribute('aria-label', 'Ranes product demo');
+        if (still) demo.replaceChild(video, still);
+        if (caption && demo.getAttribute('data-caption')) caption.textContent = demo.getAttribute('data-caption');
+      })
+      .catch(function () { /* keep the still image */ });
+  }
+
   /* ------------------------------------------------------------ misc --- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

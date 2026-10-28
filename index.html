@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<title>Christian McCarthy — Web Engineer with a Flair for the Creative</title>
-<meta name="description" content="Christian McCarthy is a Boulder, Colorado software engineer building web and mobile applications — Vue.js, TypeScript, .NET and PostgreSQL — with a background in design and creative direction.">
+<title>Christian McCarthy — Complete Products, Built at Team Speed</title>
+<meta name="description" content="Christian McCarthy designs and builds complete products — mobile, web and backend — using AI to work at team speed. Boulder, Colorado. Open to contract, fractional CTO and founding engineer work.">
 <meta name="author" content="Christian McCarthy">
 <link rel="canonical" href="https://christianmccarthy.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://christianmccarthy.com/">
-<meta property="og:title" content="Christian McCarthy — Web Engineer with a Flair for the Creative">
-<meta property="og:description" content="A technical artist devoted to the art of building software applications. Vue.js, TypeScript, .NET, PostgreSQL — plus AI-assisted engineering with real guardrails.">
+<meta property="og:title" content="Christian McCarthy — Complete Products, Built at Team Speed">
+<meta property="og:description" content="I design and build complete products — mobile, web and backend — using AI to work at team speed. Open to contract, fractional CTO and founding engineer work.">
 <meta property="og:image" content="https://christianmccarthy.com/img/background/start-page-1920.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#10161d">
@@ -44,7 +44,7 @@
 </head>
 <body data-nav="always">
 
-<a class="skip" href="#about">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- ============================================================== nav === -->
 <header class="nav" id="nav">
@@ -53,8 +53,9 @@
     <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navList" aria-label="Menu"><span></span></button>
     <nav aria-label="Sections">
       <ul class="nav__list" id="navList">
-        <li><a href="#about">About</a></li>
         <li><a href="#ranes">Ranes</a></li>
+        <li><a href="#hire">Work with me</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a class="nav__cta" href="#contact">Get in touch</a></li>
@@ -75,19 +76,151 @@
            width="368" height="172" fetchpriority="high">
       <h1>Christian McCarthy</h1>
       <hr class="hero__rule">
-      <p class="hero__tagline">Software Engineer with a Flair for the Creative</p>
+      <p class="hero__tagline">I design and build complete products: mobile, web and backend, using AI to work at team speed.</p>
       <p class="hero__kicker">concept · design · development · engineering</p>
+      <p class="hero__open">Open to contract, fractional CTO and founding engineer work.</p>
       <div class="hero__links">
         <a class="is-primary" href="#ranes">Featured project</a>
-        <a href="#work">Selected work</a>
+        <a href="#hire">Work with me</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ about === -->
 <main id="main">
+<!-- ========================================================== featured === -->
+<section class="section featured" id="ranes">
+  <div class="wrap">
+    <div class="featured__head">
+      <div class="reveal">
+        <p class="eyebrow">Featured project</p>
+        <h2 class="section-title">Ranes — supporting workers in risky environments.</h2>
+        <p class="section-intro">
+          A suite of enterprise tools for risk-conscious industries: a mobile field app, an
+          administrative portal, and the services that tie a day's work to the evidence it produces.
+        </p>
+      </div>
+      <ul class="featured__meta reveal">
+        <li><div class="k">Role</div><div class="v">CTO / Designer / Engineer — front-end architecture, product direction, full-stack delivery</div></li>
+        <li><div class="k">Surfaces</div><div class="v">iOS &amp; Android field app · admin portal · .NET API</div></li>
+        <li><div class="k">Stack</div><div class="v">Vue 3 · TypeScript · Quasar · Capacitor · .NET 8 · EF Core · PostgreSQL · Docker</div></li>
+      </ul>
+    </div>
+
+    <!-- Demo video: export a 60–90s screen recording (demo data only) to img/portfolio/ranes/ranes-demo.mp4
+         and js/site.js swaps it in for the still image automatically. -->
+    <figure class="featured__art reveal" id="ranesDemo"
+            data-video="img/portfolio/ranes/ranes-demo.mp4"
+            data-poster="img/portfolio/ranes/ranes-composite.png"
+            data-caption="A short demo with sample data: the field app and the form builder.">
+      <img src="img/portfolio/ranes/ranes-composite.png" alt="The Ranes admin portal showing a compliance overview across six jobs, beside the field app's home screen with its tap-in control and recent activity" width="960" height="620" loading="lazy">
+      <figcaption>The admin portal overview and the field app.</figcaption>
+    </figure>
+
+    <div class="featured__cols">
+      <div class="reveal">
+        <h3>The problem</h3>
+        <p>
+          Compliance lives or dies on evidence. The people who generate that evidence are on a crane pad
+          or in a confined space, wearing gloves, often without signal — and the people who need it are
+          answering an auditor, an inspector or a client three months later.
+        </p>
+        <p>
+          Most tools in this category solve that by asking the field worker to file things correctly:
+          pick the job, pick the cost code, tag the photo. That discipline never survives contact with a
+          real shift, and the reporting is only as good as the filing.
+        </p>
+        <h3 style="margin-top:28px">The approach</h3>
+        <p>
+          Context is attached <strong>once, by an administrator</strong>, and inherited server-side at write
+          time. A field worker opens the app, sees the work that's due, and completes it. The job, cost code
+          and tags arrive on the record because the assignment already carried them. Compliance evidence
+          becomes a by-product of doing the work instead of a second, competing job.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <h3>What I built</h3>
+        <ul class="bullets">
+          <li><strong>Field app (iOS &amp; Android)</strong> One Vue 3 + Quasar codebase shipped natively through Capacitor: a work queue, a tap-in timeclock with a readiness check, custom and assigned forms integrated into workflows, photo capture with markup and comments, geo-location with maps.
+            <ul class="stores stores--inline">
+              <li><a href="https://apps.apple.com/us/app/ranes/id6767666005" target="_blank" rel="noopener">
+                <img src="img/badges/app-store.svg" alt="Download Ranes on the App Store"
+                     width="96" height="32" loading="lazy"></a></li>
+              <li><a href="https://play.google.com/store/apps/details?id=com.ranes.app&amp;hl=en_US" target="_blank" rel="noopener">
+                <img src="img/badges/google-play.png" alt="Get Ranes on Google Play"
+                     width="107" height="32" loading="lazy"></a></li>
+            </ul>
+          </li>
+          <li><strong>Fun &amp; functional tools</strong>Log-it: a canvas for sketching and annotating ideas or observations, Planners: AI supported planning, Forms: dynamic form creation.</li>
+          <li><strong>Admin portal</strong> Job hierarchies, AI supported planning, a form builder, document control and an assignment model that makes the inheritance work.</li>
+          <li><strong>Reporting &amp; exports</strong> Governed report definitions with job- and period-scoped exports, so "prove it" is a filter and a download rather than a project.</li>
+          <li><strong>Localization</strong> Nine locales across web and native, including date/format handling verified by automated checks.</li>
+          <li><strong>API &amp; backend</strong>Architecture design and microservices implementation, primarily using .NET 8 and PostgreSQL.</li>
+        </ul>
+      </div>
+    </div>
+
+    <ol class="loop reveal">
+      <li><h4>Assign</h4><p>An administrator composes the work and attaches its context once — job, cost code, forms, documents.</p></li>
+      <li><h4>Do</h4><p>The crew sees one queue. No categorizing, no data entry beyond the work itself. It holds up offline.</p></li>
+      <li><h4>Accrue</h4><p>Submissions, photos, hours and hazards land already dimensioned by job, on the server, at write time.</p></li>
+      <li><h4>Prove</h4><p>Filter the period, scope to the site, export the packet. Same records, different question.</p></li>
+    </ol>
+
+    <ul class="featured__stats reveal">
+      <li><b>3</b><span>Web, iOS and Android apps from a single codebase</span></li>
+      <li><b>9</b><span>supported locales, web and native</span></li>
+      <li><b>60+</b><span>automated contract checks gating merges</span></li>
+      <li><b>.NET 8</b><span>API on PostgreSQL, containerized end to end</span></li>
+    </ul>
+
+    <p class="featured__note reveal">
+      Engineering notes: development runs entirely in Docker. Images are pushed to a private registry. 
+      Alongside unit and end-to-end tests, the codebase carries a set of <em>contract verification
+      scripts</em> — executable assertions about design and behavior decisions that would otherwise quietly
+      regress. It's also where the AI-assisted workflow earns its keep: specs, trackers and those checks are
+      the guardrails that let generated work stay inside a deliberate architecture.
+      Screens shown are representative; product detail available on request.
+    </p>
+  </div>
+</section>
+
+<!-- ========================================================= work with me === -->
+<section class="section section--alt" id="hire">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Work with me</p>
+      <h2 class="section-title">Product engineering, without the full-time overhead.</h2>
+      <p class="section-intro">
+        Contract is often the quickest way to start: a scoped project, a defined outcome, and a working
+        relationship before any larger commitment. I focus on small companies in compliance, industrial,
+        fitness and e-learning work, where the software has to be simple and dependable.
+      </p>
+    </div>
+
+    <ul class="cards">
+      <li class="card reveal">
+        <span class="card__num">01</span>
+        <h3>Fractional CTO</h3>
+        <p>Technical direction for a team that needs it without a full-time executive: architecture, roadmap, vendor and hiring decisions, and hands-on delivery where it counts.</p>
+      </li>
+      <li class="card reveal">
+        <span class="card__num">02</span>
+        <h3>Contract product engineer</h3>
+        <p>One person who can take a feature or a whole product from concept and design through mobile, web and API, with AI built into how the work gets done.</p>
+      </li>
+      <li class="card reveal">
+        <span class="card__num">03</span>
+        <h3>Founding engineer</h3>
+        <p>Range and speed for an early-stage team: first versions shipped quickly, on foundations that hold up once the product finds its audience.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ about === -->
 <section class="section" id="about">
   <div class="wrap">
     <div class="about__grid">
@@ -165,99 +298,6 @@
   </div>
 </section>
 
-<!-- ========================================================== featured === -->
-<section class="section featured" id="ranes">
-  <div class="wrap">
-    <div class="featured__head">
-      <div class="reveal">
-        <p class="eyebrow">Featured project</p>
-        <h2 class="section-title">Ranes — supporting workers in risky environments.</h2>
-        <p class="section-intro">
-          A suite of enterprise tools for risk-conscious industries: a mobile field app, an
-          administrative portal, and the services that tie a day's work to the evidence it produces.
-        </p>
-      </div>
-      <ul class="featured__meta reveal">
-        <li><div class="k">Role</div><div class="v">CTO / Designer / Engineer — front-end architecture, product direction, full-stack delivery</div></li>
-        <li><div class="k">Surfaces</div><div class="v">iOS &amp; Android field app · admin portal · .NET API</div></li>
-        <li><div class="k">Stack</div><div class="v">Vue 3 · TypeScript · Quasar · Capacitor · .NET 8 · EF Core · PostgreSQL · Docker</div></li>
-      </ul>
-    </div>
-
-    <figure class="featured__art reveal">
-      <img src="img/portfolio/ranes/ranes-composite.png" alt="The Ranes admin portal showing a compliance overview across six jobs, beside the field app's home screen with its tap-in control and recent activity" width="960" height="620" loading="lazy">
-      <figcaption>The admin portal overview and the field app.</figcaption>
-    </figure>
-
-    <div class="featured__cols">
-      <div class="reveal">
-        <h3>The problem</h3>
-        <p>
-          Discount programs live or die on evidence. The people who generate that evidence are on a crane pad
-          or in a confined space, wearing gloves, often without signal — and the people who need it are
-          answering an auditor, an underwriter or a client three months later.
-        </p>
-        <p>
-          Most tools in this category solve that by asking the field worker to file things correctly:
-          pick the job, pick the cost code, tag the photo. That discipline never survives contact with a
-          real shift, and the reporting is only as good as the filing.
-        </p>
-        <h3 style="margin-top:28px">The approach</h3>
-        <p>
-          Context is attached <strong>once, by an administrator</strong>, and inherited server-side at write
-          time. A field worker opens the app, sees the work that's due, and completes it. The job, cost code
-          and tags arrive on the record because the assignment already carried them. Compliance evidence
-          becomes a by-product of doing the work instead of a second, competing job.
-        </p>
-      </div>
-
-      <div class="reveal">
-        <h3>What I built</h3>
-        <ul class="bullets">
-          <li><strong>Field app (iOS &amp; Android)</strong> One Vue 3 + Quasar codebase shipped natively through Capacitor: a work queue, a tap-in timeclock with a readiness check, custom and assigned forms integrated into workflows, photo capture with markup and comments, geo-location with maps.
-            <ul class="stores stores--inline">
-              <li><a href="https://apps.apple.com/us/app/ranes/id6767666005" target="_blank" rel="noopener">
-                <img src="img/badges/app-store.svg" alt="Download Ranes on the App Store"
-                     width="96" height="32" loading="lazy"></a></li>
-              <li><a href="https://play.google.com/store/apps/details?id=com.ranes.app&amp;hl=en_US" target="_blank" rel="noopener">
-                <img src="img/badges/google-play.png" alt="Get Ranes on Google Play"
-                     width="107" height="32" loading="lazy"></a></li>
-            </ul>
-          </li>
-          <li><strong>Fun &amp; functional tools</strong>Log-it: a canvas for sketching and annotating ideas or observations, Planners: AI supported planning, Forms: dynamic form creation.</li>
-          <li><strong>Admin portal</strong> Job hierarchies, AI supported planning, a form builder, document control and an assignment model that makes the inheritance work.</li>
-          <li><strong>Reporting &amp; exports</strong> Governed report definitions with job- and period-scoped exports, so "prove it" is a filter and a download rather than a project.</li>
-          <li><strong>Localization</strong> Nine locales across web and native, including date/format handling verified by automated checks.</li>
-          <li><strong>API &amp; backend</strong>Architecture design and microservices implementation, primarily using .NET 8 and PostgreSQL.</li>
-        </ul>
-      </div>
-    </div>
-
-    <ol class="loop reveal">
-      <li><h4>Assign</h4><p>An administrator composes the work and attaches its context once — job, cost code, forms, documents.</p></li>
-      <li><h4>Do</h4><p>The crew sees one queue. No categorizing, no data entry beyond the work itself. It holds up offline.</p></li>
-      <li><h4>Accrue</h4><p>Submissions, photos, hours and hazards land already dimensioned by job, on the server, at write time.</p></li>
-      <li><h4>Prove</h4><p>Filter the period, scope to the site, export the packet. Same records, different question.</p></li>
-    </ol>
-
-    <ul class="featured__stats reveal">
-      <li><b>3</b><span>Web, iOS and Android apps from a single codebase</span></li>
-      <li><b>9</b><span>supported locales, web and native</span></li>
-      <li><b>60+</b><span>automated contract checks gating merges</span></li>
-      <li><b>.NET 8</b><span>API on PostgreSQL, containerized end to end</span></li>
-    </ul>
-
-    <p class="featured__note reveal">
-      Engineering notes: development runs entirely in Docker. Images are pushed to a private registry. 
-      Alongside unit and end-to-end tests, the codebase carries a set of <em>contract verification
-      scripts</em> — executable assertions about design and behavior decisions that would otherwise quietly
-      regress. It's also where the AI-assisted workflow earns its keep: specs, trackers and those checks are
-      the guardrails that let generated work stay inside a deliberate architecture.
-      Screens shown are representative; product detail available on request.
-    </p>
-  </div>
-</section>
-
 <!-- ============================================================= work === -->
 <section class="section" id="work">
   <div class="wrap">
@@ -265,7 +305,7 @@
       <p class="eyebrow">Selected work</p>
       <h2 class="section-title">Sample projects</h2>
       <p class="section-intro">
-        A cross-section of earlier applications — learning platforms, event systems, e-commerce and
+        A cross-section of shipped applications — learning platforms, event systems, e-commerce and
         mobile. Open any panel for the detail on what was built and how.
       </p>
     </div>
@@ -315,7 +355,7 @@
         <div class="tile__body">
           <h3>Western CPE Website</h3>
           <p>Public marketing and commerce site with a course catalog integrated into an Umbraco CMS.</p>
-          <div class="tile__tools">jQuery · Handlebars · .NET · SASS · Umbraco</div>
+          <div class="tile__tools">JavaScript · .NET · SASS · Umbraco</div>
           <div class="tile__links">
             <button class="linkbtn" data-project="projects/westerncpe-website-overview.html" data-title="Website Overview">Overview</button>
             <button class="linkbtn" data-project="projects/westerncpe-website-catalog.html" data-title="Course Catalog">Course catalog</button>
@@ -329,7 +369,7 @@
         <div class="tile__body">
           <h3>GetEvent Calendar</h3>
           <p>Endurance-sport event calendar and registration application with search, map views and custom event pages.</p>
-          <div class="tile__tools">jQuery · Handlebars · PHP CodeIgniter · Google Maps</div>
+          <div class="tile__tools">JavaScript · REST API · Google Maps</div>
           <div class="tile__links">
             <button class="linkbtn" data-project="projects/getevent-calendar-list.html" data-title="Calendar List View">List view</button>
             <button class="linkbtn" data-project="projects/getevent-calendar-map.html" data-title="Google Map View">Map view</button>
@@ -343,7 +383,7 @@
         <div class="tile__body">
           <h3>SchoolBlocks Sponsors</h3>
           <p>Custom e-commerce and content management for school sponsorship, from Photoshop concepts through payment integration.</p>
-          <div class="tile__tools">jQuery · PHP Yii · Stripe · Google APIs</div>
+          <div class="tile__tools">Stripe · Subscriptions · Google APIs</div>
           <div class="tile__links">
             <button class="linkbtn" data-project="projects/schoolblocks-sponsorship-concepts.html" data-title="Photoshop Concepts">Concepts</button>
             <button class="linkbtn" data-project="projects/schoolblocks-sponsorship-commerce.html" data-title="E-commerce">E-commerce</button>
@@ -357,7 +397,7 @@
         <div class="tile__body">
           <h3>AOP Prior Art Rank</h3>
           <p>A tag-comparison reading tool for evaluating existing patent submissions, designed in concept and built out.</p>
-          <div class="tile__tools">Photoshop · inVision · PHP Zend · JavaScript</div>
+          <div class="tile__tools">Photoshop · Prototyping · JavaScript</div>
           <div class="tile__links">
             <button class="linkbtn" data-project="projects/articleone-rank-reader.html" data-title="Prior Art Rank — Concepts &amp; Development">Concepts &amp; dev</button>
           </div>
@@ -369,7 +409,7 @@
         <div class="tile__body">
           <h3>GetEvent Registration</h3>
           <p>Dashboard and control panel for event directors to manage participants, reporting and subscriptions.</p>
-          <div class="tile__tools">PHP CodeIgniter · jQuery · Backbone</div>
+          <div class="tile__tools">Bootstrap · REST API · E-commerce</div>
           <div class="tile__links">
             <button class="linkbtn" data-project="projects/getevent-registration-management.html" data-title="Manage Registrants">Manage registrants</button>
           </div>
@@ -381,7 +421,7 @@
         <div class="tile__body">
           <h3>TrainingPeaks Mobile</h3>
           <p>Mobile version of the training-log application, built as half of a two-person team against JSON/WCF services.</p>
-          <div class="tile__tools">HTML5 · CSS3 · jQuery · .NET</div>
+          <div class="tile__tools">HTML5 · CSS3 · JavaScript · .NET</div>
           <div class="tile__links">
             <button class="linkbtn" data-project="projects/trainingpeaks-mobile.html" data-title="TrainingPeaks Mobile Application">Mobile app</button>
           </div>
@@ -396,7 +436,7 @@
   <div class="wrap">
     <div class="reveal">
       <p class="eyebrow">Experience</p>
-      <h2 class="section-title">Twenty-plus years of shipping software.</h2>
+      <h2 class="section-title">Products shipped end to end, from concept to app store.</h2>
       <p class="section-intro">
         Roles ranging from technical lead to creative director — usually somewhere in between, translating
         business initiatives into technical approaches and then building them.
@@ -425,7 +465,7 @@
         <div>
           <h3 class="tl__role">Senior Web Developer / Business Operations</h3>
           <p class="tl__org">WesternCPE.com</p>
-          <p>Defined technical initiatives and implemented operational systems. Co-built the marketing and commerce site (jQuery, SASS, ASP.NET MVC, Umbraco, Entity Framework) and led continuous development of the Vue.js learning portal, including webcast delivery with live Q&amp;A and CPE attendance checks.</p>
+          <p>Defined technical initiatives and implemented operational systems. Co-built the marketing and commerce site (SASS, ASP.NET MVC, Umbraco, Entity Framework) and led continuous development of the Vue.js learning portal, including webcast delivery with live Q&amp;A and CPE attendance checks.</p>
         </div>
       </li>
       <li class="tl reveal">
@@ -461,11 +501,11 @@
         </div>
       </li>
       <li class="tl reveal">
-        <div class="tl__when">2000 — 2007</div>
+        <div class="tl__when">Earlier</div>
         <div>
           <h3 class="tl__role">Web Developer · Owner</h3>
           <p class="tl__org">People Productions · Dogtail Design</p>
-          <p>Agency and independent work across Classic ASP, ASP.NET, PHP, Ruby on Rails, SQL Server and MySQL — a wide range of client projects, in teams and one-on-one.</p>
+          <p>Agency and independent work across ASP.NET, PHP, Ruby on Rails, SQL Server and MySQL — a wide range of client projects, in teams and one-on-one.</p>
         </div>
       </li>
     </ul>
@@ -482,10 +522,10 @@
     <div class="contact__grid">
       <div class="reveal">
         <p class="eyebrow">Status</p>
-        <span class="status-pill">Open to new opportunities</span>
+        <span class="status-pill">Open to contract, fractional and full-time work</span>
         <h2 class="section-title" style="color:#fff">Let's talk about what you're building.</h2>
         <p class="contact__lead">
-          Open to new opportunities. Happiest where design direction and engineering meet —
+          Happy to start with a scoped project. Happiest where design direction and engineering meet —
           and where someone has to own both.
         </p>
         <div class="contact__actions">

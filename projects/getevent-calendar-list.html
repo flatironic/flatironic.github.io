@@ -15,9 +15,9 @@
       The calendar needed to include as many events as possible to be a desirable destination for users, and simple searching and geolocation
       had to exist to make it usable.
       <br/><br/>
-      I built a RESTful API with PHP/CodeIgniter to serve a JavaScript module that used free IP-lookup geolocation services. The module made an
+      I built a RESTful API to serve a JavaScript module that used free IP-lookup geolocation services. The module made an
       AJAX request for a specified radius from the result of the geolocation lookup; if the service failed, it fell back gracefully to a
-      date-based query. The API returned JSON and templating was handled with Handlebars. Infinite scrolling and a responsive design made the
+      date-based query. The API returned JSON that the module rendered client-side. Infinite scrolling and a responsive design made the
       search usable and elegant.
       <br/><br/>
       Code sample: <a href="https://github.com/flatironic/Samples/tree/master/event-search" target="_blank" rel="noopener">github.com/flatironic/Samples &mdash; /event-search</a>
