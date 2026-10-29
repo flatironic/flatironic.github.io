@@ -108,12 +108,7 @@
       </ul>
     </div>
 
-    <!-- Demo video: export a 60–90s screen recording (demo data only) to img/portfolio/ranes/ranes-demo.mp4
-         and js/site.js swaps it in for the still image automatically. -->
-    <figure class="featured__art reveal" id="ranesDemo"
-            data-video="img/portfolio/ranes/ranes-demo.mp4"
-            data-poster="img/portfolio/ranes/ranes-composite.png"
-            data-caption="A short demo with sample data: the field app and the form builder.">
+    <figure class="featured__art reveal">
       <img src="img/portfolio/ranes/ranes-composite.png" alt="The Ranes admin portal showing a compliance overview across six jobs, beside the field app's home screen with its tap-in control and recent activity" width="960" height="620" loading="lazy">
       <figcaption>The admin portal overview and the field app.</figcaption>
     </figure>
@@ -133,10 +128,11 @@
         </p>
         <h3 style="margin-top:28px">The approach</h3>
         <p>
-          Context is attached <strong>once, by an administrator</strong>, and inherited server-side at write
-          time. A field worker opens the app, sees the work that's due, and completes it. The job, cost code
-          and tags arrive on the record because the assignment already carried them. Compliance evidence
-          becomes a by-product of doing the work instead of a second, competing job.
+          <strong>Everything is managed from the portal.</strong> An administrator sets up the job there once:
+          the cost code, the forms, the documents and who is assigned. A field worker opens the app, sees the
+          work that's due, and does it. Every form, photo and hour they submit is filed under the right job
+          automatically, so nobody in the field has to sort or tag anything. Compliance evidence becomes a
+          by-product of doing the work instead of a second, competing job.
         </p>
       </div>
 
@@ -154,7 +150,7 @@
             </ul>
           </li>
           <li><strong>Fun &amp; functional tools</strong>Log-it: a canvas for sketching and annotating ideas or observations, Planners: AI supported planning, Forms: dynamic form creation.</li>
-          <li><strong>Admin portal</strong> Job hierarchies, AI supported planning, a form builder, document control and an assignment model that makes the inheritance work.</li>
+          <li><strong>Admin portal</strong> Where everything is managed: job hierarchies, AI supported planning, a form builder, document control, and the assignments that send work out to the field.</li>
           <li><strong>Reporting &amp; exports</strong> Governed report definitions with job- and period-scoped exports, so "prove it" is a filter and a download rather than a project.</li>
           <li><strong>Localization</strong> Nine locales across web and native, including date/format handling verified by automated checks.</li>
           <li><strong>API &amp; backend</strong>Architecture design and microservices implementation, primarily using .NET 8 and PostgreSQL.</li>
@@ -163,9 +159,9 @@
     </div>
 
     <ol class="loop reveal">
-      <li><h4>Assign</h4><p>An administrator composes the work and attaches its context once — job, cost code, forms, documents.</p></li>
+      <li><h4>Assign</h4><p>In the portal, an administrator sets up the work once — job, cost code, forms, documents.</p></li>
       <li><h4>Do</h4><p>The crew sees one queue. No categorizing, no data entry beyond the work itself. It holds up offline.</p></li>
-      <li><h4>Accrue</h4><p>Submissions, photos, hours and hazards land already dimensioned by job, on the server, at write time.</p></li>
+      <li><h4>Accrue</h4><p>Submissions, photos, hours and hazards are filed under the right job automatically, with no tagging in the field.</p></li>
       <li><h4>Prove</h4><p>Filter the period, scope to the site, export the packet. Same records, different question.</p></li>
     </ol>
 

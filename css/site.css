@@ -292,7 +292,6 @@ ul { margin: 0; padding: 0; }
   border: 1px solid rgba(255, 255, 255, .09); border-radius: 20px;
   padding: clamp(16px, 3vw, 34px);
 }
-.featured__art video { display: block; width: 100%; height: auto; border-radius: 12px; background: #000; }
 .featured__art figcaption {
   font-size: 13px; color: #7e8e9c; margin-top: 14px; text-align: center; font-family: var(--font-mono);
 }
